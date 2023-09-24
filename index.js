@@ -3,9 +3,15 @@ const { log } = require('console');
 const http = require('http');
 const {handlerReqRes} = require('./helpers/handleReqRes');
 const environment = require('./helpers/environments');
+const data = require('./lib/data');
 
 // app object - module scaffolding
 const app = {};
+
+// testing update functionality
+data.delete('test', 'newFile2', (err)=>{
+    console.log(`Error was: ${err}`);
+});
 
 // create server
 app.createServer = ()=> {
@@ -13,7 +19,7 @@ app.createServer = ()=> {
     server.listen(environment.port, ()=>{
         console.log(`listening to port ${environment.port}`);
     })
-}
+};
 
 // handle req res
 app.handleReqRes = handlerReqRes;
