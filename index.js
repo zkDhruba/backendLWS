@@ -9,9 +9,9 @@ const data = require('./lib/data');
 const app = {};
 
 // testing update functionality
-data.delete('test', 'newFile2', (err)=>{
-    console.log(`Error was: ${err}`);
-});
+// data.delete('test', 'newFile2', (err)=>{
+//     console.log(`Error was: ${err}`);
+// });
 
 // create server
 app.createServer = ()=> {
