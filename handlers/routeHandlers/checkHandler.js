@@ -9,7 +9,7 @@ const { maxChecks } = require('../../helpers/environments');
 // module scaffolding
 const handler = {};
 
-handler.checkHandler = (requestProperties, callback)=> {
+handler.checkHandler = (requestProperties, callback) => {
     const acceptedMethods = ['get', 'post', 'put', 'delete'];
 
     if(acceptedMethods.indexOf(requestProperties.method) > -1) {
